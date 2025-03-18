@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wclean
+rm -rf testCase/log.*
+foamCleanTutorials testCase
+echo "cleaned testCase"

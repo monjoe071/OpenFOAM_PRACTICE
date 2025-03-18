@@ -1,0 +1,28 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-83cd285f0e3f
+Exec   : OF00helloWorld -case testCase
+Date   : Mar 18 2025
+Time   : 18:05:34
+Host   : "dadayindeMacBook-Pro.local"
+PID    : 74579
+I/O    : uncollated
+Case   : ./testCase
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Hello there, I'm an OpenFOAM program!
+你现在不用生成网格或者做别的事情，只是一个简单的输出程序
+	It's me again, in a new line. Let's move on.
+End
+
