@@ -1,0 +1,9 @@
+processing/myOutPut.dat
+0 1 2 3 ...
+
+3
+(
+U (1 0 0)
+U1 (0 0 0)
+U2 (1 0 0)
+)

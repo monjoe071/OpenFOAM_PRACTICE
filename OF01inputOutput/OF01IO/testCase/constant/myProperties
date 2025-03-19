@@ -1,0 +1,43 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      myProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application    icoFoam;
+
+writeFormat    ascii;
+
+purgeWrite     1;
+
+point
+(
+    0
+    1
+    2
+);
+
+source
+(
+    U1 (0 0 0)
+    U2 (1 0 0)
+);
+
+subDict
+{
+    myVec (0.0 0.0 1.0);
+}
+
+
+// ************************************************************************* //
