@@ -72,18 +72,18 @@ int main(int argc, char *argv[])
     //lookup() does not need to be told the type of the variable, it will automatically deduce it
     //The following lines will grab the value of "someWord" then assign it to the word variable someWord
     //word is a class derived from string, so it is a string
-    word someWorld;
-    customDict.lookup("someWorld") >> someWorld;
+    word someWord;
+    customDict.lookup("someWord") >> someWord;
 
     // 这个方法需要让lookup知道变量类型，并且如果值没有找到，你可以指定一个默认值
     //此例中就指定了一个默认值1.0
     //find a scalar value named someScalar
-    scalar someScalar( customDict.lookuporDefault<scalar>("someScalar", 1.0) );
+    scalar someScalar( customDict.lookupOrDefault<scalar>("someScalar", 1.0) );
 
     //find a boolean value
     // A switch is a neat feature allowing boolean values to be read from a dict,
     // it supports the OpenFOAM yes/on/true/1 and no/off/false/0 values automatically.
-    bool someBool( customDict.lookuporDefault<bool>("someBool", true) );
+    bool someBool( customDict.lookupOrDefault<Switch>("someBool", true) );
 
     //find a array/List in OF format
     List<scalar> someList ( customDict.lookup("someList") );
@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
 
     //Summarise what's been read and print in the console window
     Info << nl << "Read the following:" << nl << nl
-         << "someWorld " << someWorld << nl << nl
+         << "someWord " << someWord << nl << nl
          << "someScalar " << someScalar << nl << nl
          << "someList " << someList << nl << nl
          << "someHashTable " << someHashTable << nl << nl
@@ -106,14 +106,14 @@ int main(int argc, char *argv[])
     //Create the output path
     fileName outputDir = mesh.time().path()/"postProcessing";
     //Create the directory
-    mkdir(outputDir);
+    mkDir(outputDir);
 
     autoPtr<OFstream> outputFilePtr;
 
     outputFilePtr.reset(new OFstream(outputDir/"customOutputFile.dat"));
 
     outputFilePtr() << "BSZDSRC" << endl;
-    outputFilaPtr() << "0 1 2 3 4 5" << endl;
+    outputFilePtr() << "0 1 2 3 4 5" << endl;
 
     someHashTable.insert("newNEWKey", vector(1., 0., 0.));
     outputFilePtr() << someHashTable << endl;
