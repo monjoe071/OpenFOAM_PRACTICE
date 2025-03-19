@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
    IOobject dictIO //Create an IOobject object
    (
         dictName, //Name of the dictionary
-        mesh.time().constant(), //Path of the dictionary
+        runTime.constant(), //Path of the dictionary
         mesh, //relavant mesh
         IOobject::MUST_READ, //conpulsory to read from the dictionary
         IOobject::NO_WRITE //No need to write to the dictionary
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
         IOobject
         (
             "myProperties",
-            mesh.time().constant(),
+            runTime.constant(),
             mesh,
             IOobject::MUST_READ,
             IOobject::NO_WRITE
