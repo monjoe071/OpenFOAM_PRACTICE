@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ofextension: debug solver",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "paraview () {\n\tlocal _paraviews=(/Applications/[Pp][Aa][Rr][Aa][Vv][Ii][Ee][Ww]*.app) \n\t$_paraviews/Contents/MacOS/paraview \"$@\"\n}\n/Users/dadayin/OpenFOAM/dadayin-7/platforms/darwin64ClangDPInt32Debug/bin/OF03time",
+      "args": [],
+      "stopAtEntry": true,
+      "cwd": "/Users/dadayin/workspace/OpenFOAM_PRACTICE/OF03understandingTheMesh/OF03time/testCase",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "ofextension: debug solver",
+      "miDebuggerPath": "${workspaceFolder}/.vscode/of-gdb.sh"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+    wmkdep: OF03time.C
+    Ctoo: OF03time.C
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:4:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/parRun.H:35:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Pstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UPstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/labelList.H:47:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/label.H:39:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/int.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/int32.H:43:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/word.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/string.H:246:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/stringI.H:48:17: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    std::string(move(str))
+                ^
+                std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/stringI.H:237:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    std::string::operator=(move(str));
+                           ^
+                           std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:4:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/parRun.H:35:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Pstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UPstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/labelList.H:48:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/List.H:43:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UList.H:422:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UListI.H:26:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/error.H:51:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/messageStream.H:217:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/OSstream.H:39:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Ostream.H:39:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/IOstream.H:50:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/fileName.H:260:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/fileNameI.H:66:12: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    string(move(fn))
+           ^
+           std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:4:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/parRun.H:35:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Pstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UPstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/labelList.H:48:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/List.H:316:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/List.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/IndirectList.H:160:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/IndirectListI.H:43:17: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    addressing_(move(addr))
+                ^
+                std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/IndirectListI.H:70:28: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    IndirectListAddressing(move(addr)),
+                           ^
+                           std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:4:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/parRun.H:35:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Pstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UPstream.H:42:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/labelList.H:48:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/List.H:316:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/List.C:33:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/BiIndirectList.H:135:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/BiIndirectListI.H:52:17: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    addressing_(move(addr))
+                ^
+                std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:6:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Time.H:43:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/unwatchedIOdictionary.H:37:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/baseIOdictionary.H:43:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dictionary.H:57:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/ITstream.H:97:23: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            tokenList(move(tokens)),
+                      ^
+                      std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:6:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Time.H:43:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/unwatchedIOdictionary.H:37:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/baseIOdictionary.H:43:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dictionary.H:105:19: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            name_(move(name.name_))
+                  ^
+                  std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dictionary.H:150:21: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+            name_ = move(name.name_);
+                    ^
+                    std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:7:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvMesh.H:50:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/polyMesh.H:45:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/primitiveMesh.H:56:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/faceList.H:34:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/face.H:437:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/faceI.H:68:15: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    labelList(move(lst))
+              ^
+              std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/faceI.H:140:26: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    labelList::operator=(move(l));
+                         ^
+                         std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:7:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvMesh.H:50:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/polyMesh.H:45:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/primitiveMesh.H:57:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/cellList.H:35:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/cell.H:150:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/cellI.H:48:15: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    labelList(move(lst))
+              ^
+              std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/cellI.H:76:26: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    labelList::operator=(move(l));
+                         ^
+                         std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:8:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvc.H:39:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/surfaceInterpolate.H:41:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/surfaceInterpolationScheme.H:308:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/surfaceInterpolationScheme.C:27:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/volFields.H:37:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricFields.H:34:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricScalarField.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricField.H:721:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricField.C:1558:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricBoundaryField.C:28:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/globalMeshData.H:629:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/globalMeshDataTemplates.C:28:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/mapDistribute.H:271:33: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+                pointField pfld(move(fld));
+                                ^
+                                std::
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:8:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvc.H:44:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvcDdt.H:250:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvcDdt.C:28:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/ddtScheme.H:357:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/ddtScheme.C:30:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/cyclicAMIFvPatch.H:39:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/meshTools/lnInclude/cyclicAMILduInterface.H:39:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/meshTools/lnInclude/AMIInterpolation.H:58:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/globalIndex.H:265:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/globalIndexI.H:36:14: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    offsets_(move(offsets))
+             ^
+             std::
+OF03time.C:71:17: error: no member named 'bounaryMesh' in 'Foam::fvMesh'; did you mean 'boundaryMesh'?
+    forAll(mesh.bounaryMesh(), patchI)
+                ^~~~~~~~~~~
+                boundaryMesh
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/UList.H:436:30: note: expanded from macro 'forAll'
+    for (Foam::label i=0; i<(list).size(); i++)
+                             ^
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/polyMesh.H:435:37: note: 'boundaryMesh' declared here
+            const polyBoundaryMesh& boundaryMesh() const
+                                    ^
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:6:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Time.H:47:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/TimeState.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dimensionedScalar.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dimensionedType.H:40:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dimensionSet.H:46:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/scalarField.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Field.H:339:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Field.C:109:16: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    List<Type>(move(f))
+               ^
+               std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/faceI.H:93:12: note: in instantiation of member function 'Foam::Field<Foam::Vector<double>>::Field' requested here
+    return p;
+           ^
+In file included from OF03time.C:31:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/finiteVolume/lnInclude/fvCFD.H:6:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Time.H:47:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/TimeState.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dimensionedScalar.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dimensionedType.H:40:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/dimensionSet.H:46:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/scalarField.H:38:
+In file included from /Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Field.H:339:
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/Field.C:79:16: warning: unqualified call to 'std::move' [-Wunqualified-std-cast-call]
+    List<Type>(move(f))
+               ^
+               std::
+/Users/dadayin/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/mapDistribute.H:271:28: note: in instantiation of member function 'Foam::Field<Foam::Vector<double>>::Field' requested here
+                pointField pfld(move(fld));
+                           ^
+17 warnings and 1 error generated.
+make: *** [Make/darwin64ClangDPInt32Debug/OF03time.o] Error 1
