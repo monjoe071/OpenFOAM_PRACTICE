@@ -1,0 +1,71 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-83cd285f0e3f
+Exec   : OF03time -case test_case
+Date   : Mar 25 2025
+Time   : 00:36:00
+Host   : "dadayindeMacBook-Pro.local"
+PID    : 17496
+I/O    : uncollated
+Case   : ./test_case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Case name    :    "test_case"
+Root path    :    "."
+Path         :    "./test_case"
+Time path    :    "./test_case/0"
+Controldict  :    
+{
+    application     icoFoam;
+    startFrom       startTime;
+    startTime       0;
+    stopAt          endTime;
+    endTime         0.5;
+    deltaT          0.005;
+    writeControl    timeStep;
+    writeInterval   20;
+    purgeWrite      0;
+    writeFormat     ascii;
+    writePrecision  6;
+    writeCompression off;
+    timeFormat      general;
+    timePrecision   6;
+    runTimeModifiable true;
+}
+
+Format       :    ascii
+Version      :    2.0
+Start time   :    startTime [0 0 1 0 0 0 0] 0
+End time     :    endTime [0 0 1 0 0 0 0] 0.5
+Time step    :    deltaT [0 0 1 0 0 0 0] 0.005
+# set end time = 10
+# set deltaT = 1
+Start time    :    startTime [0 0 1 0 0 0 0] 0
+End time      :    endTime [0 0 1 0 0 0 0] 10
+Time tep      :    deltaT [0 0 1 0 0 0 0] 1
+Time: 1
+Time: 2
+Time: 3
+Time: 4
+Time: 5
+Time: 6
+Time: 7
+Time: 8
+Time: 9
+Time: 10
+
+ExecutionTime = 0 s  ClockTime = 0 s
+
+End
+

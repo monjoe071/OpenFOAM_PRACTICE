@@ -1,0 +1,12 @@
+#!/bin/sh
+cd "${0%/*}" || exit 1
+#-------------------------------------------------------------------------
+
+appPath = $(cd `dirname $0`; pwd)
+appName = "${appPath##*/}"
+
+cd test_case
+
+rm -rf log.*
+foamCleanTutorials
+echo "Cleaning done."
