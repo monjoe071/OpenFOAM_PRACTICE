@@ -78,13 +78,21 @@ int main(int argc, char *argv[])
     }
     Info << nl << endl;
 
+    forAll(mesh.boundaryMesh(), patchI)
+    {
+        Info << "Patch " << patchI
+             << " has " << mesh.boundary()[patchI].patch().faceCells().size()
+             << " face cells." << endl;
+    }
+    Info << nl << endl;
+
     label nIndex(0);
     forAll(mesh.boundaryMesh(),patchI)
     {
         Info << "Patch " << patchI << nl
              << "\tits face " << nIndex
              << " adjacent to cell " << mesh.boundary()[patchI].patch().faceCells()[nIndex] << nl
-             //<< "\tits normal vector " << mesh.boundary()[patchI].Sf()[nIndex] << nl
+             //<< "\tits normal vector " << mesh.boundary()[patchI].patch().Sf()[nIndex] << nl
              //<< "\tits surface area " << mag(mesh.boundary()[patchI].Sf()[nIndex]) << nl
              << endl;
     }

@@ -39,6 +39,18 @@ int main(int argc, char *argv[])
 
     #include "createMesh.H"
 
+    IOdictionary volumeRatioDict // Define dictionary object
+    (
+        IOobject
+        (
+            "volumeRatioDict", // Dictionary nme
+            runTime.system(), // Dictionary path
+            mesh, // 基于 mesh 构造
+            IOobject::MUST_READ, 
+            IOobject::NO_WRITE
+        )
+    );
+
     const scalar c = mesh.C().size();
     Info << "Number of cells = " << c << endl; // Get the number of mesh cells
 
@@ -52,16 +64,22 @@ int main(int argc, char *argv[])
    //List<scalar> ratios(len, initial); // Create a fixed size list
    //label counter = 0;
     //lines above are added 
-   scalar volumeRatio = 0.0;
-   scalar currentRatio = 0.0;
+    scalar volumeRatio = 0.0;
+    scalar currentRatio = 0.0;
 
-    forAll (neighbour, cellI)
-    {
-        List<label> n = neighbour[cellI];
+    label nFail = 0;
 
-        const scalar cellVolume = mesh.V()[cellI];
+    scalar maxRatio(readScalar(volumeRatioDict.lookup("maxRatio")));
+    // read from Dict
 
-        forAll (n, i)
+     forAll (neighbour, cellI) // Over all neighbour cells
+     {
+        List<label> n = neighbour[cellI]; 
+        // Get access to the neighbour cells for each cell and put in list n
+
+        const scalar cellVolume = mesh.V()[cellI]; // Get the volume of cellI
+
+        forAll (n, i) // 得看一下forAll语句怎么定义的
         {
             label neighbourIndex = n[i];
             scalar neighbourVolume = mesh.V()[neighbourIndex];
@@ -74,14 +92,22 @@ int main(int argc, char *argv[])
                 {
                     currentRatio = volumeRatio;
                 }
-                //ratios.append(volumeRatio);
-                //ratios[counter] = volumeRatio;
-                //counter += 1;
+
+                if ( volumeRatio > maxRatio)
+                {
+                    nFail += 1;
+                }
+                 //ratios.append(volumeRatio);
+                 //ratios[counter] = volumeRatio;
+                 //counter += 1;
             }
         }
     }
 
-    Info << "Maximum volume ratio = " << currentRatio << endl;
+    Info << "Maximum volume ratio = " << currentRatio << nl 
+         << "Number of cell volume ratios exceeding " << maxRatio
+         << " = " << nFail << nl
+         << endl;
 
     // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
