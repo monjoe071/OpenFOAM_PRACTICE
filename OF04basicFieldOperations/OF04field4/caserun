@@ -1,0 +1,10 @@
+#!/bin/sh
+cd "${0%/*}" || exit 1
+
+appPath=$(cd `dirname $0`; pwd)
+appName="${appPath##*/}"
+
+blockMesh -case testCase | tee testCase/log.mesh
+echo "Meshing done."
+
+$appName -case testCase | tee testCase/log.run
