@@ -30,6 +30,8 @@ Description
 
 #include "fvCFD.H"
 
+#include "calculatePressure.H"
+
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 scalar calculatePressure(scalar t, vector x, vector x0, scalar scale);
@@ -40,122 +42,124 @@ int main(int argc, char *argv[])
     #include "createTime.H"
     #include "createMesh.H"
 
-    Info << "Reading transportProperties\n" << endl;
-    IOdictionary transportProperties
-    (
-        IOobject
-        (
-            "transportProperties",
-            runTime.constant(),
-            mesh,
-            IOobject::MUST_READ_IF_MODIFIED,
-            IOobject::NO_WRITE
-        )
-    );
-    dimensionedScalar nu
-    (
-        "nu",
-        dimViscosity,
-        transportProperties
-    );
+    #include "createFields.H"
 
-    Info << "Reading field p\n" << endl;
-    volScalarField p
-    (
-        IOobject
-        (
-            "p",
-            runTime.timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    );
+    // Info << "Reading transportProperties\n" << endl;
+    // IOdictionary transportProperties
+    // (
+    //     IOobject
+    //     (
+    //         "transportProperties",
+    //         runTime.constant(),
+    //         mesh,
+    //         IOobject::MUST_READ_IF_MODIFIED,
+    //         IOobject::NO_WRITE
+    //     )
+    // );
+    // dimensionedScalar nu
+    // (
+    //     "nu",
+    //     dimViscosity,
+    //     transportProperties
+    // );
 
-    Info << "Reading field T\n" << endl;
-    volScalarField T
-    (
-        IOobject
-        (
-            "T",
-            runTime.timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    );
+    // Info << "Reading field p\n" << endl;
+    // volScalarField p
+    // (
+    //     IOobject
+    //     (
+    //         "p",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::MUST_READ,
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     mesh
+    // );
 
-    Info << "Reading field U\n" << endl;
-    volVectorField U
-    (
-        IOobject
-        (
-            "U",
-            runTime.timeName(),
-            mesh,
-            IOobject::MUST_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh
-    );
+    // Info << "Reading field T\n" << endl;
+    // volScalarField T
+    // (
+    //     IOobject
+    //     (
+    //         "T",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::MUST_READ,
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     mesh
+    // );
 
-    volScalarField zeroScalarField
-    (
-        IOobject
-        (
-            "zeroScalarField",
-            runTime.timeName(),
-            mesh,
-            IOobject::NO_READ, // 无需给初始条件的文件
-            IOobject::AUTO_WRITE
-        ),
-        mesh,
-        dimensionedScalar("zeroScalarField", dimless, Zero) // initialize as zero
-    );
+    // Info << "Reading field U\n" << endl;
+    // volVectorField U
+    // (
+    //     IOobject
+    //     (
+    //         "U",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::MUST_READ,
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     mesh
+    // );
 
-    volVectorField zeroVectorField
-    (
-        IOobject
-        (
-            "zeroVectorField",
-            runTime.timeName(),
-            mesh,
-            IOobject::NO_READ,
-            IOobject::AUTO_WRITE
-        ),
-        mesh,
-        dimensionedVector("zeroVectorField", dimless, Zero)
-    );
+    // volScalarField zeroScalarField
+    // (
+    //     IOobject
+    //     (
+    //         "zeroScalarField",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::NO_READ, // 无需给初始条件的文件
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     mesh,
+    //     dimensionedScalar("zeroScalarField", dimless, Zero) // initialize as zero
+    // );
 
-    volVectorField gradT
-    (
-        IOobject
-        (
-            "gradT",
-            runTime.timeName(),
-            mesh,
-            IOobject::NO_READ,
-            IOobject::AUTO_WRITE
-        ),
-        fvc::grad(T) // 因为是从 T 场计算而来，所以不需要再次和 mesh 建立关系
-    );
+    // volVectorField zeroVectorField
+    // (
+    //     IOobject
+    //     (
+    //         "zeroVectorField",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::NO_READ,
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     mesh,
+    //     dimensionedVector("zeroVectorField", dimless, Zero)
+    // );
 
-    Info << "Reading/calculating face flux field phi\n" << endl;
-    surfaceScalarField phi
-    (
-        IOobject
-        (
-            "phi",
-            runTime.timeName(),
-            mesh,
-            IOobject::READ_IF_PRESENT,
-            IOobject::AUTO_WRITE
-        ),
-        fvc::flux(U)
-        // fvc::interpolate(U)*mesh.Sf(); // 等同于此行计算
-    );
+    // volVectorField gradT
+    // (
+    //     IOobject
+    //     (
+    //         "gradT",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::NO_READ,
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     fvc::grad(T) // 因为是从 T 场计算而来，所以不需要再次和 mesh 建立关系
+    // );
+
+    // Info << "Reading/calculating face flux field phi\n" << endl;
+    // surfaceScalarField phi
+    // (
+    //     IOobject
+    //     (
+    //         "phi",
+    //         runTime.timeName(),
+    //         mesh,
+    //         IOobject::READ_IF_PRESENT,
+    //         IOobject::AUTO_WRITE
+    //     ),
+    //     fvc::flux(U)
+    //     // fvc::interpolate(U)*mesh.Sf(); // 等同于此行计算
+    // );
 
     // Create a vector object originVector with initial value
     const vector originVector(0.05, 0.05, 0.005);
@@ -209,17 +213,17 @@ int main(int argc, char *argv[])
 }
 
 // definiiton of the custom function
-scalar calculatePressure(scalar t, vector x, vector x0, scalar scale)
-{
-    scalar r(mag(x - x0) / scale); // create a scalar object r and initialize
+// scalar calculatePressure(scalar t, vector x, vector x0, scalar scale)
+// {
+//     scalar r(mag(x - x0) / scale); // create a scalar object r and initialize
 
-    scalar rR(1.0 / (r + 1e-12));
+//     scalar rR(1.0 / (r + 1e-12));
 
-    scalar f(1.0);
+//     scalar f(1.0);
 
-    return Foam::sin(2.0 * Foam::constant::mathematical::pi * f * t) * rR;
+//     return Foam::sin(2.0 * Foam::constant::mathematical::pi * f * t) * rR;
 
-}
+// }
 
 
 // ************************************************************************* //
