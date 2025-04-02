@@ -1,0 +1,3 @@
+computeVelocityPressure.C
+
+LIB = $(FOAM_USER_LIBBIN)/libcomputeVelocityPressure

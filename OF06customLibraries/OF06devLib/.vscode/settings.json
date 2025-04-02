@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "computeVelocityPressure.C": "cpp",
+        "OF06devLib.C": "cpp"
+    }
+}

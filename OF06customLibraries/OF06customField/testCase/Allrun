@@ -1,0 +1,5 @@
+#!/bin/bash
+
+blockMesh > log.Mesh
+echo "Meshing done."
+OF06customField
