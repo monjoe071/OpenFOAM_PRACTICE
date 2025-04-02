@@ -1,0 +1,3 @@
+OF05parallel1.C
+
+EXE = $(FOAM_USER_APPBIN)/OF05parallel1
